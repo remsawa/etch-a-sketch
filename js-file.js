@@ -67,3 +67,7 @@ container.appendChild(sq1L10);
 //How about making a function to create all the squares once container is loaded?
 
 
+//Drawing
+container.addEventListener('mouseover', (e) => {
+  e.target.style.backgroundColor = 'black';
+});
