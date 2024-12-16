@@ -42,9 +42,18 @@ const sq1L10 = document.createElement('div');
 sq1L10.id = 'sq1L10';
 sq1L10.classList = 'sq';
 
+function makeSq(container, numberOfBoxes) {
+  for (let i = 1; i <= numberOfBoxes; i++) {
+    const sq = document.createElement('div'); // Create a box
+    sq.id = `sq${i}`; // Assign a unique ID
+    sq.classList.add('sq'); // Add the class 'sq' for styling
+    container.appendChild(sq); // Append the box to the container
+  }
+}
+makeSq(container, 256);
 
 document.body.appendChild(container);//container.appendChild(square);
-container.appendChild(sq1L1);
+/*container.appendChild(sq1L1);
 container.appendChild(sq1L2);
 container.appendChild(sq1L3);
 container.appendChild(sq1L4);
@@ -54,6 +63,7 @@ container.appendChild(sq1L7);
 container.appendChild(sq1L8);
 container.appendChild(sq1L9);
 container.appendChild(sq1L10);
+*/
 //How about making a function to create all the squares once container is loaded?
 
 
