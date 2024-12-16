@@ -1,9 +1,13 @@
 h1 {
+  display: flex;
+  justify-self: center;
   color:tomato;
 }
 
 
 #container {
+  display: flex;
+  justify-self: center;
   height: 500px;
   width: 500px;
   background-color: pink;
