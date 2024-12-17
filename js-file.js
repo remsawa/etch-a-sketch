@@ -9,27 +9,38 @@ const btn = document.querySelector('#btn')
 
 const sqCount = document.createElement('h2');
 container.appendChild(sqCount);
-sqCount.textContent = 'i';
 
+let numOfSqs = 256;
 function makeSq(sketchContainer) {
- 
-  let btnClicked =btn.addEventListener('click',(e) => {
+  btn.addEventListener('mousedown',(e) => {
     numOfSqs = 0;
+    sqCount.textContent = `${numOfSqs}`;
+
+  });
+
+  if(down) {
+    console.log('heyo');
+  } else {
+    startDefault();
+  }
+
+  btn.addEventListener('mouseup',(e) => {
     numOfSqs = prompt('How many squares?');
-    if(numOfSqs) {
       console.log('hi);');
       makeSq(sketchContainer, numOfSqs);
-    }
+      sqCount.textContent = `${numOfSqs}`;
   });
-  let numOfSqs = 256;
- 
 
-  for (let i = 1; i <= numOfSqs; i++) {
-    const sq = document.createElement('div'); // Create a box
-    sq.id = `sq${i}`; // Assign a unique ID
-    sq.classList.add('sq'); // Add the class 'sq' for styling
-    sketchContainer.appendChild(sq); // Append the box to the container
-  }
+    function startDefault() {
+      for (let i = 1; i <= numOfSqs; i++) {
+        const sq = document.createElement('div'); // Create a box
+        sq.id = `sq${i}`; // Assign a unique ID
+        sq.classList.add('sq'); // Add the class 'sq' for styling
+        sketchContainer.appendChild(sq); // Append the box to the container
+      }
+      sqCount.textContent = `${numOfSqs}`;
+    }
+
 }
 makeSq(sketchContainer);
 
