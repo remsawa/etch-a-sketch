@@ -1,6 +1,8 @@
 
-const container = document.createElement('div');
-container.id = 'container';
+const container = document.querySelector('#container');
+
+const sketchContainer = document.createElement('div');
+sketchContainer.id = 'sketchContainer';
 
 const sq1L1 = document.createElement('div');
 sq1L1.id = 'sq1L1';
@@ -42,17 +44,17 @@ const sq1L10 = document.createElement('div');
 sq1L10.id = 'sq1L10';
 sq1L10.classList = 'sq';
 
-function makeSq(container, numberOfBoxes) {
+function makeSq(sketchContainer, numberOfBoxes) {
   for (let i = 1; i <= numberOfBoxes; i++) {
     const sq = document.createElement('div'); // Create a box
     sq.id = `sq${i}`; // Assign a unique ID
     sq.classList.add('sq'); // Add the class 'sq' for styling
-    container.appendChild(sq); // Append the box to the container
+    sketchContainer.appendChild(sq); // Append the box to the container
   }
 }
-makeSq(container, 256);
+makeSq(sketchContainer, 256);
 
-document.body.appendChild(container);//container.appendChild(square);
+container.appendChild(sketchContainer);//container.appendChild(square);
 /*container.appendChild(sq1L1);
 container.appendChild(sq1L2);
 container.appendChild(sq1L3);
@@ -68,6 +70,6 @@ container.appendChild(sq1L10);
 
 
 //Drawing
-container.addEventListener('mouseover', (e) => {
+sketchContainer.addEventListener('mouseover', (e) => {
   e.target.style.backgroundColor = 'black';
 });
