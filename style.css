@@ -30,8 +30,8 @@ h2 {
   color: red;
 }
 #sketchContainer {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   display: flex;
   flex-wrap: wrap;
   justify-self: center;
