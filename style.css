@@ -31,13 +31,17 @@ h2 {
 }
 #sketchContainer {
   display: flex;
-  flex-wrap: wrap;
   justify-self: center;
-  justify-content: space-between;
-  border: 10px solid darkred;
+
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start; 
+  /*border: 10px solid darkred;*/
   background-color: red;
   max-width: 450px;
-  max-height: 500px;
+  max-height: 450px;
+ 
+  gap: 2px;
 }
 .sq {
   background-color: white;
