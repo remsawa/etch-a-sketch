@@ -43,14 +43,24 @@ btn.addEventListener('click',(e) => {
   numOfSqs = prompt('How many squares?');
 
   console.log('Squares Cleared');
-  
-  for (let i = 1; i <= numOfSqs; i++) {
-    const sq = document.createElement('div'); // Create a box
-    sq.id = `sq${i}`; // Assign a unique ID
-    sq.classList.add('sq'); // Add the class 'sq' for styling
-    sketchContainer.appendChild(sq); // Append the box to the container
+  if(numOfSqs <= 500) {
+    for (let i = 1; i <= numOfSqs; i++) {
+      const sq = document.createElement('div'); // Create a box
+      sq.id = `sq${i}`; // Assign a unique ID
+      sq.classList.add('sq'); // Add the class 'sq' for styling
+      sketchContainer.appendChild(sq); // Append the box to the container
+      sqCount.textContent = `${numOfSqs}`;
+    }
+  } else {
+    alert('Pick a number between 1 and 500');
+    for (let i = 1; i <= numOfSqs; i++) {
+      const sq = document.createElement('div'); // Create a box
+      sq.id = `sq${i}`; // Assign a unique ID
+      sq.classList.add('sq'); // Add the class 'sq' for styling
+      sketchContainer.appendChild(sq); // Append the box to the container
+      sqCount.textContent = `${numOfSqs}`;
+    }
   }
-  sqCount.textContent = `${numOfSqs}`;
 
 });
 
