@@ -25,13 +25,15 @@ function makeSq(sketchContainer) {
 makeSq(sketchContainer);
 
 btn.addEventListener('click',(e) => {
-  while (sketchContainer.firstChild) {
-  sketchContainer.removeChild(sketchContainer.firstChild);
-  }
   numOfSqs = prompt('How many squares?');
 
-  console.log('Squares Cleared');
   if(numOfSqs <= 500) {
+     //Clearing number of squares on click
+     while (sketchContainer.firstChild) {
+      sketchContainer.removeChild(sketchContainer.firstChild);
+    }
+    console.log('Squares Cleared');
+    //Make squares
     for (let i = 1; i <= numOfSqs; i++) {
       const sq = document.createElement('div'); // Create a box
       sq.id = `sq${i}`; // Assign a unique ID
@@ -39,16 +41,22 @@ btn.addEventListener('click',(e) => {
       sketchContainer.appendChild(sq); // Append the box to the container
       sqCount.textContent = `${numOfSqs}`;
     }
-  } else {
-    alert('Pick a number between 1 and 500');
-    for (let i = 1; i <= numOfSqs; i++) {
-      const sq = document.createElement('div'); // Create a box
-      sq.id = `sq${i}`; // Assign a unique ID
-      sq.classList.add('sq'); // Add the class 'sq' for styling
-      sketchContainer.appendChild(sq); // Append the box to the container
-      sqCount.textContent = `${numOfSqs}`;
+
+  } else if (numOfSqs > 500) {
+    while (numOfSqs > 500) {
+      alert('Pick a number between 1 and 500');
+      numOfSqs = prompt('How many squares?');
     }
-  }
+      if(numOfSqs <= 500) {
+        for (let i = 1; i <= numOfSqs; i++) {
+          const sq = document.createElement('div'); // Create a box
+          sq.id = `sq${i}`; // Assign a unique ID
+          sq.classList.add('sq'); // Add the class 'sq' for styling
+          sketchContainer.appendChild(sq); // Append the box to the container
+          sqCount.textContent = `${numOfSqs}`;
+        }
+      }
+    }
 });
 
 //Drawing
