@@ -37,8 +37,10 @@ h2 {
   align-content: flex-start; 
   /*border: 10px solid darkred;*/
   background-color: red;
-  max-width: 470px;
-  max-height: 470px;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 50%;
+  min-height: 50%;
   //gap: 1px;
 }
 .sq {

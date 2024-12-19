@@ -29,8 +29,12 @@ btn.addEventListener('click',(e) => {
 
   if(numOfSqs <= 500) {
      //Clearing number of squares on click
-     while (sketchContainer.firstChild) {
-      sketchContainer.removeChild(sketchContainer.firstChild);
+     if (numOfSqs > 0) {
+      while (sketchContainer.firstChild) {
+        sketchContainer.removeChild(sketchContainer.firstChild);
+      } 
+    } else if (numOfSqs <= 0) {
+        alert('Pick a number between 1 and 500');
     }
     console.log('Squares Cleared');
     //Make squares
@@ -41,8 +45,8 @@ btn.addEventListener('click',(e) => {
       sketchContainer.appendChild(sq); // Append the box to the container
       sqCount.textContent = `${numOfSqs}`;
     }
-  } else if (numOfSqs > 500) {
-    while (numOfSqs > 500) {
+  } else if (numOfSqs > 500 || numOfSqs == 0) {
+    while (numOfSqs > 500 || numOfSqs == 0) {
       alert('Pick a number between 1 and 500');
       numOfSqs = prompt('How many squares?');
     }
