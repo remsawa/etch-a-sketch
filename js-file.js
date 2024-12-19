@@ -41,7 +41,6 @@ btn.addEventListener('click',(e) => {
       sketchContainer.appendChild(sq); // Append the box to the container
       sqCount.textContent = `${numOfSqs}`;
     }
-
   } else if (numOfSqs > 500) {
     while (numOfSqs > 500) {
       alert('Pick a number between 1 and 500');

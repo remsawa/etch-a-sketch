@@ -32,16 +32,14 @@ h2 {
 #sketchContainer {
   display: flex;
   justify-self: center;
-
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start; 
   /*border: 10px solid darkred;*/
   background-color: red;
-  max-width: 450px;
-  max-height: 450px;
- 
-  gap: 2px;
+  max-width: 470px;
+  max-height: 470px;
+  //gap: 1px;
 }
 .sq {
   background-color: white;
@@ -49,4 +47,3 @@ h2 {
   height: 20px;
   width: 20px;
 }
-
