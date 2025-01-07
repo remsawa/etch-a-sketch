@@ -1,4 +1,6 @@
 
+/* OLD CODE
+
 const container = document.querySelector('#container');
 
 const sketchContainer = document.createElement('div');
@@ -63,8 +65,11 @@ btn.addEventListener('click',(e) => {
 });
 
 //Drawing
+
 sketchContainer.addEventListener('mouseover', (e) => {
   e.target.style.backgroundColor = 'black';
 });
+
+*/
 
 
