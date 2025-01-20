@@ -11,6 +11,17 @@ const sketchContainer = document.querySelector('#sketchContainer');
 //const sqCount = document.createElement('h2');
 //container.appendChild(sqCount);
 
+const slider = document.querySelector('.slider');
+const sliderValue = slider.value;
+
+//sliderValue.innerHTML = slider.aria
+
+if (sliderValue == 260) {
+  console.log('true');
+} else {
+  console.log(sliderValue);
+}
+
 
 function makeSq(sketchContainer) {
   for (let i = 1; i <= 260; i++) {
@@ -42,9 +53,21 @@ sketchContainer.addEventListener('mouseover', (e) => {
   }
 });
 
-const resetBtn = document.querySelector('#resetBtn');
+/*
+sketchContainer.addEventListener('mousedown', (e) => {
+  if (e.target.classList.contains('sq')) {
+    let currentOpacity = parseFloat(e.target.style.opacity);
+    if (currentOpacity < 1) {
+      e.target.style.opacity = currentOpacity - 0.1;
+    }
+  }
+});*/
 
-const slider = document.querySelector('#slidecontainer');
+const resetBtn = document.querySelector('#resetBtn');
+const lineBtn = document.querySelector('#lineBtn')
+
+
+//lineBtn.addEventListener('click',(e) => {
 
 
 
@@ -85,11 +108,3 @@ resetBtn.addEventListener('click',(e) => {
       }
     }
 });
-
-
-//Drawing
-
-sketchContainer.addEventListener('mouseover', (e) => {
-  e.target.style.backgroundColor = 'black';
-});
-
