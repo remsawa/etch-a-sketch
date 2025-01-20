@@ -3,30 +3,35 @@ const container = document.querySelector('#container');
 const sketchContainer = document.querySelector('#sketchContainer');
 //const sq = document.createElement('div'); // Create a box
 
+//sketchContainer.appendChild(sq);
 
-const resetBtn = document.querySelector('#resetBtn');
-sketchContainer.appendChild(sq);
+//const defaultSqs = 256;
 
-
-const slider = document.querySelector('#slidecontainer');
-
-
+//let  numOfSqs = 256;
 //const sqCount = document.createElement('h2');
 //container.appendChild(sqCount);
 
-const defaultSqs = 256;
 
-//let  numOfSqs = 256;
 function makeSq(sketchContainer) {
-  for (let i = 1; i <= defaultSqs; i++) {
+  for (let i = 1; i <= 260; i++) {
     const sq = document.createElement('div'); // Create a box
     sq.id = `sq${i}`; // Assign a unique ID
     sq.classList.add('sq'); // Add the class 'sq' for styling
     sketchContainer.appendChild(sq); // Append the box to the container
   }
-  //sqCount.textContent = `${numOfSqs}`;
+  sqCount.textContent = `${numOfSqs}`;
 }
 makeSq(sketchContainer);
+
+const resetBtn = document.querySelector('#resetBtn');
+
+
+const slider = document.querySelector('#slidecontainer');
+
+
+
+
+
 
 resetBtn.addEventListener('click',(e) => {
   numOfSqs = prompt('How many squares?');
