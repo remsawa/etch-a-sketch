@@ -11,18 +11,21 @@
   <h1> Etch-a-Sketch</h1>
 
   <div id="container">
-    <div id="sketch-container">
+    <div id="sketchContainer">
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" class="slider">
     </div>
     <div class="btnContainer">
     
     <div class="resetBtnContainer">
-      <button type ="button" id="btn">
+      <button type ="button" id="resetBtn" class='btn'>
         <img src ="./img/sketch-reset-btn.png" alt="Reset Button" height="37" width="88">
       </button>
     </div>
 
     <div class="lineBtnContainer">
-      <button type ="button" id="btn">
+      <button type ="button" id="lineBtn" class ='btn'>
         <img src ="./img/sketch-line-btn.png" alt="Line Mode Button" height="37" width="88">
       </button>
       

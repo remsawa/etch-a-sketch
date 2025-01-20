@@ -24,13 +24,26 @@ h1 {
   padding: 50px;
 }
 
-#sketch-container {
-  margin: 10px;
+.slidecontainer {
   display: flex;
-  width: 500px;
-  height: 500px;
-  background-color: #efefef;
+  width: 75%;
+}
 
+.slider {
+  -webkit-appearance: none; 
+  width: 100%; /* Full-width */
+  height: 1px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+}
+
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #d3d3d3; /* Grey background */
+  cursor: pointer; /* Cursor on hover */
 }
 
 .btnContainer {
@@ -49,21 +62,23 @@ h1 {
 }
 
 #sketchContainer {
+  margin: 10px;
+  display: flex;
+  width: 500px;
+  height: 500px;
+  background-color: #efefef;
+
   display: flex;
   justify-self: center;
   flex-wrap: wrap;
   justify-content: start;
   align-content: start; 
-  height: 64px;
-  width: 64px;
 }
-
-
 
 .sq {
   width: 10px;
   height: 10px;
-  background-color: white;
+  background-color: rgb(84, 51, 51);
 }
 
 h2 {
