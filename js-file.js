@@ -42,16 +42,9 @@ sketchContainer.addEventListener('mouseover', (e) => {
   }
 });
 
-
-  //sq.style.backgroundColor = "red";
-//}
 const resetBtn = document.querySelector('#resetBtn');
 
-
 const slider = document.querySelector('#slidecontainer');
-
-
-
 
 
 
@@ -92,6 +85,7 @@ resetBtn.addEventListener('click',(e) => {
       }
     }
 });
+
 
 //Drawing
 
