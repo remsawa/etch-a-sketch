@@ -17,12 +17,34 @@ function makeSq(sketchContainer) {
     const sq = document.createElement('div'); // Create a box
     sq.id = `sq${i}`; // Assign a unique ID
     sq.classList.add('sq'); // Add the class 'sq' for styling
+    sq.style.opacity = 0.5;
     sketchContainer.appendChild(sq); // Append the box to the container
   }
-  sqCount.textContent = `${numOfSqs}`;
+  //sqCount.textContent = `${numOfSqs}`;
 }
 makeSq(sketchContainer);
 
+/*sketchContainer.addEventListener('mouseover', (e) => {
+  if (e.target.classList.contains('sq')) {
+    let currentOpacity = parseFloat(e.target.style.opacity);
+    if (currentOpacity < 1) {
+      e.target.style.opacity = currentOpacity + 0.5;
+    }
+  }
+});*/
+
+sketchContainer.addEventListener('mouseover', (e) => {
+  if (e.target.classList.contains('sq')) {
+    let currentOpacity = parseFloat(e.target.style.opacity);
+    if (currentOpacity < 1) {
+      e.target.style.opacity = currentOpacity + 0.1;
+    }
+  }
+});
+
+
+  //sq.style.backgroundColor = "red";
+//}
 const resetBtn = document.querySelector('#resetBtn');
 
 
