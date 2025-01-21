@@ -26,9 +26,15 @@ h1 {
 
 .slidecontainer {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
   width: 75%;
 }
 
+.output {
+  color: #d3d3d3;
+}
 .slider {
   -webkit-appearance: none; 
   width: 100%; /* Full-width */
