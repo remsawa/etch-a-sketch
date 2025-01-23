@@ -9,8 +9,6 @@ Change btn image on click
 https://stackoverflow.com/questions/23462786/change-button-image-onclick
 
 
-1/21
-https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
-
-
 1/22
+-Should change the reset button to CLEAR since it now resets the opacity of the squares!!
+
