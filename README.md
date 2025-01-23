@@ -12,3 +12,8 @@ https://stackoverflow.com/questions/23462786/change-button-image-onclick
 1/22
 -Should change the reset button to CLEAR since it now resets the opacity of the squares!!
 
+1/23
+SLIDER
+-Fix the slider handle. It currently sits underneath the slider. //OK
+-Fix the display of the current value on mouseup. //OK
+-Make the slider.value create the number of squares.

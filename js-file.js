@@ -20,19 +20,35 @@ slider.parentElement.appendChild(output);
 slider.addEventListener('mouseup', () => {
   output.textContent = `${slider.value}`;
   //Trying to create ticks
-  if (output.textContent < 80) {
+  if (output.textContent <= 95) {
     slider.value = 65;
-    console.log(65);
-
-    output.textContent = `${slider.value}`;
-  } else if (output.textContent > 115 ||  output.textContent < 145) {
+    output.textContent = 65;
+  } else if (output.textContent > 95 &&  output.textContent < 145) {
     slider.value = 130;
-    console.log(130);
-  } else if (output.textContent > 150 && output.textContent < 200) {
+    output.textContent = 130;
+  } else if (output.textContent > 145 && output.textContent < 225) {
     slider.value = 195;
-    console.log(195);
+    output.textContent = 195;
+    
+  } else if (output.textContent > 225 && output.textContent < 290) {
+    slider.value = 260;
+    output.textContent = 260;
+    
+  } else if (output.textContent > 290 && output.textContent < 355) {
+    slider.value = 325;
+    output.textContent = 325; 
 
+  } else if (output.textContent > 355 && output.textContent < 420) {
+      slider.value = 390;
+      output.textContent = 390;
+    
+  } else if (output.textContent > 420) {
+    slider.value = 455;
+    output.textContent = 455;
   }
+});
+slider.addEventListener('mousedown', () => {
+  output.textContent = `${slider.value}`;
 });
 
 /*slider.addEventListener("mouseup", (event) => {
@@ -40,15 +56,6 @@ slider.addEventListener('mouseup', () => {
 });*/
 
 let tickPoints = [65, 130, 195, 260, 325, 390, 455];
-
-
-
-function snapToTick (slider) {
-  while (output.textContent == 65) {
-    console.log('hi');
-  }
-}
-snapToTick(slider);
 
 
 const defaultSqs = 260;

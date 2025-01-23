@@ -48,7 +48,7 @@ h1 {
   appearance: none;
   border-radius: 15px;
   width: 10px; /* Set a specific slider handle width */
-  height: 17px; /* Slider handle height */
+  height: 10px; /* Slider handle height */
   background: #d3d3d3; /* Grey background */
   cursor: pointer; /* Cursor on hover */
 }
