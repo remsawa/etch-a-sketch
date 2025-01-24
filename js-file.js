@@ -47,6 +47,19 @@ slider.addEventListener('mousedown', () => {
   output.textContent = `${slider.value}`;
 });
 
+const resetBtn = document.querySelector('#resetBtn');
+const lineBtn = document.querySelector('#lineBtn')
+
+
+resetBtn.addEventListener('click', () => {
+  const squares = sketchContainer.querySelectorAll('.sq');
+  
+  //Reset the opacity of each square
+  squares.forEach((square) => {
+    square.style.opacity = 0.2; 
+  });
+});
+
 let tickPoints = [65, 130, 195, 260, 325, 390, 455];
 
 
@@ -54,7 +67,7 @@ let defaultSqs = 260;
 let numberOfSqs = output.textContent;
 
 function makeSq(sketchContainer) {
-  for (let i = 1; i <= defaultSqs; i++) {
+  for (let i = 1; i <= slider.value; i++) {
     const sq = document.createElement('div'); // Create a box
     sq.id = `sq${i}`; // Assign a unique ID
     sq.classList.add('sq'); // Add the class 'sq' for styling
@@ -72,19 +85,14 @@ sketchContainer.addEventListener('mouseover', (e) => {
     }
   }
 });
-
-const resetBtn = document.querySelector('#resetBtn');
-const lineBtn = document.querySelector('#lineBtn')
-
-
-resetBtn.addEventListener('click', () => {
-  const squares = sketchContainer.querySelectorAll('.sq');
-  
-  //Reset the opacity of each square
-  squares.forEach((square) => {
-    square.style.opacity = 0.2; 
-  });
+sketchContainer.addEventListener('mousedown', (e) => {
+  if (e.target.classList.contains('sq')) {
+    let currentOpacity = parseFloat(e.target.style.opacity);
+    e.target.style.opacity = currentOpacity - 0.2;
+    }
 });
+
+
 
 
 function clearSqs(sketchContainer) {

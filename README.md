@@ -17,3 +17,7 @@ SLIDER
 -Fix the slider handle. It currently sits underneath the slider. //OK
 -Fix the display of the current value on mouseup. //OK
 -Make the slider.value create the number of squares.
+
+1/24
+makeSq fucntion
+--Make the slider.value create the number of squares.
