@@ -4,6 +4,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -16,12 +17,22 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   background-color: rgb(38, 38, 38);
   height: 600px;
   width: 600px;
   gap: 10px;
-  padding: 50px;
+}
+
+.btns {
+  margin: 20px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  width: 500px;
+  height: 120px;
 }
 
 .slidecontainer {

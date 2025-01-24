@@ -42,6 +42,11 @@ slider.addEventListener('mouseup', () => {
     slider.value = 455;
     output.textContent = 455;
   }
+  while(sketchContainer.firstChild) {
+    sketchContainer.removeChild(sketchContainer.firstChild);
+  }
+  makeSq(sketchContainer);
+  
 });
 slider.addEventListener('mousedown', () => {
   output.textContent = `${slider.value}`;
@@ -60,9 +65,6 @@ resetBtn.addEventListener('click', () => {
   });
 });
 
-let tickPoints = [65, 130, 195, 260, 325, 390, 455];
-
-
 let defaultSqs = 260;
 let numberOfSqs = output.textContent;
 
@@ -77,6 +79,7 @@ function makeSq(sketchContainer) {
 }
 makeSq(sketchContainer);
 
+//Drawing
 sketchContainer.addEventListener('mouseover', (e) => {
   if (e.target.classList.contains('sq')) {
     let currentOpacity = parseFloat(e.target.style.opacity);
@@ -85,18 +88,11 @@ sketchContainer.addEventListener('mouseover', (e) => {
     }
   }
 });
+
+//Erasing
 sketchContainer.addEventListener('mousedown', (e) => {
   if (e.target.classList.contains('sq')) {
     let currentOpacity = parseFloat(e.target.style.opacity);
     e.target.style.opacity = currentOpacity - 0.2;
     }
 });
-
-
-
-
-function clearSqs(sketchContainer) {
-  while (sketchContainer.firstChild) {
-    sketchContainer.removeChild(sketchContainer.firstChild);
-  }
-}
