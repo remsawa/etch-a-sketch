@@ -18,38 +18,43 @@ slider.parentElement.appendChild(output);
 
 //slider value
 slider.addEventListener('mouseup', () => {
-  output.textContent = `${slider.value}`;
-  //Trying to create ticks
-  if (output.textContent <= 95) {
-    slider.value = 65;
-    output.textContent = 65;
-  } else if (output.textContent > 95 &&  output.textContent < 145) {
-    slider.value = 130;
-    output.textContent = 130;
-  } else if (output.textContent > 145 && output.textContent < 225) {
-    slider.value = 195;
-    output.textContent = 195;
-  } else if (output.textContent > 225 && output.textContent < 290) {
-    slider.value = 260;
-    output.textContent = 260;
-  } else if (output.textContent > 290 && output.textContent < 355) {
-    slider.value = 325;
-    output.textContent = 325; 
-  } else if (output.textContent > 355 && output.textContent < 420) {
-      slider.value = 390;
-      output.textContent = 390;
-  } else if (output.textContent > 420) {
-    slider.value = 455;
-    output.textContent = 455;
-  }
-  while(sketchContainer.firstChild) {
-    sketchContainer.removeChild(sketchContainer.firstChild);
-  }
-  makeSq(sketchContainer);
+    output.textContent = `${slider.value}`;
+    //Trying to create ticks
+    if (output.textContent <= 95) {
+      slider.value = 64;
+      output.textContent = 64;
+    } else if (output.textContent > 95 &&  output.textContent < 145) {
+      slider.value = 100;
+      output.textContent = 100;
+    } else if (output.textContent > 145 && output.textContent < 225) {
+      slider.value = 144;
+      output.textContent = 144;
+    } else if (output.textContent > 225 && output.textContent < 290) {
+      slider.value = 196;
+      output.textContent = 196;
+    } else if (output.textContent > 290 && output.textContent < 355) {
+      slider.value = 256;
+      output.textContent = 256; 
+    } else if (output.textContent > 355 && output.textContent < 350) {
+        slider.value = 324;
+        output.textContent = 324;
+    } else if (output.textContent > 350 && output.textContent < 380) {
+      slider.value = 361;
+      output.textContent = 361;
+    } else if (output.textContent > 380) {
+      slider.value = 400;
+      output.textContent = 400;
+    }
+    while(sketchContainer.firstChild) {
+      sketchContainer.removeChild(sketchContainer.firstChild);
+    }
+    makeSq(sketchContainer);
   
 });
-slider.addEventListener('mousedown', () => {
-  output.textContent = `${slider.value}`;
+slider.addEventListener('mousedown', () => { 
+   //if (confirm("If you change the number of square your current work will be clear")){
+    output.textContent = `${slider.value}`;
+   //}
 });
 
 const resetBtn = document.querySelector('#resetBtn');
@@ -65,15 +70,23 @@ resetBtn.addEventListener('click', () => {
   });
 });
 
-let defaultSqs = 260;
+let defaultSqs = 256;
 let numberOfSqs = output.textContent;
 
 function makeSq(sketchContainer) {
-  for (let i = 1; i <= slider.value; i++) {
+  const totalSquares = slider.value;
+  const squaresPerRow = Math.sqrt(totalSquares);//Math.ceil always rounds up and returns the smallest integer greater than or equal to a given number.
+  const squareSize = (784/ squaresPerRow);//800px sketchContainer. Math.floor always rounds down and returns the largest integer less than or equal to a given number.
+  
+
+  for (let i = 1; i <= totalSquares; i++) {
     const sq = document.createElement('div'); // Create a box
     sq.id = `sq${i}`; // Assign a unique ID
     sq.classList.add('sq'); // Add the class 'sq' for styling
+    sq.style.width = `${squareSize}px`;
+    sq.style.height = `${squareSize}px`;
     sq.style.opacity = 0.2;
+    sq.style.boxSizing = 'border-box';
     sketchContainer.appendChild(sq); // Append the box to the container
   }
 }

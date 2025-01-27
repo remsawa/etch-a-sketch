@@ -20,12 +20,12 @@ SLIDER
 
 1/24
 makeSq fucntion
---Make the slider.value create the number of squares.//OK
+--Make the slider.value create the number of squares. //OK
 
 SLIDER
 -Show tickmarks at designated tick points.
 
 UI
--Fix position of container to center.
--Add div to contain everything below sketchContainer.
+-Fix position of container to center. //OK
+-Add div to contain everything below sketchContainer. //OK
 -Make sqs fit evenly into sketchContainer.
