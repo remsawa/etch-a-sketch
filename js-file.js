@@ -80,14 +80,14 @@ function makeSq(sketchContainer) {
   
 
   for (let i = 1; i <= totalSquares; i++) {
-    const sq = document.createElement('div'); // Create a box
-    sq.id = `sq${i}`; // Assign a unique ID
-    sq.classList.add('sq'); // Add the class 'sq' for styling
+    const sq = document.createElement('div');
+    sq.id = `sq${i}`; //Give each sq an id
+    sq.classList.add('sq'); //Each sq has sq class
     sq.style.width = `${squareSize}px`;
     sq.style.height = `${squareSize}px`;
     sq.style.opacity = 0.2;
     sq.style.boxSizing = 'border-box';
-    sketchContainer.appendChild(sq); // Append the box to the container
+    sketchContainer.appendChild(sq);
   }
 }
 makeSq(sketchContainer);
@@ -106,6 +106,8 @@ sketchContainer.addEventListener('mouseover', (e) => {
 sketchContainer.addEventListener('mousedown', (e) => {
   if (e.target.classList.contains('sq')) {
     let currentOpacity = parseFloat(e.target.style.opacity);
-    e.target.style.opacity = currentOpacity - 0.2;
+    if(currentOpacity > 0.2){
+        e.target.style.opacity = currentOpacity - 0.2;
     }
+  }
 });
