@@ -10,7 +10,8 @@ body {
 }
 
 #container{
-  padding-top: 20px;
+  margin-top: 30px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,15 +53,15 @@ body {
 .slidecontainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   align-items: center;
   justify-content: center;
-  width: 110%;
+  width: 218%;
 }
 
 .output {
   height: 10px;
-  margin:5px;
+  margin-bottom: 20px;
   color: #d3d3d3;
 }
 .slider {
@@ -69,7 +70,6 @@ body {
   height: 1px; 
   background: #d3d3d3; 
 }
-
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; 
@@ -80,17 +80,14 @@ body {
   background: #d3d3d3; 
   cursor: pointer; 
 }
-
-
-#btn {
+.btn {
+  padding-top: 4px;
 }
-
 .btnContainer {
   display: flex;
   flex-direction: row;
   display: flex;
   align-self: center;
-  margin: 10px;
 }
 .infoContainer {
   display: flex;
@@ -98,7 +95,23 @@ body {
   width: 784px;
   height: 50px;
 }
+
 #infoButton{
   border: 0px;
   background-color: rgb(38, 38, 38);
+}
+
+.windowWrapper{
+  display: inline;
+  position: absolute; 
+  font-size: 30px;
+  width: fit-content;  
+  background-color: rgb(38, 38, 38);
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  opacity: 50%;
+}
+.ticks{
+  
 }

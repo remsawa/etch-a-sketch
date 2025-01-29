@@ -106,25 +106,20 @@ sketchContainer.addEventListener('mousedown', (e) => {
 
 const infoButton = document.querySelector('#infoButton');
 const infoContainer = document.querySelector('.infoContainer');
+const windowWrapper = document.querySelector('.windowWrapper');
 
 const infoWindow = document.createElement('div');
 infoWindow.classList.add('window');
 
 infoButton.addEventListener('mouseover',(e) => {
- 
-  body.appendChild(infoWindow);
-  infoWindow.style.width = '100px';
-  infoWindow.style.height = '100px';
-  infoWindow.style.backgroundColor = 'red';
-
-  infoWindow.style.opacity = 0.5;
-  infoWindow.textContent = "hiii";
-  console.log('hi');
-
+  windowWrapper.appendChild(infoWindow);
+  infoWindow.textContent = "Hover to draw and click to erase.";
+  windowWrapper.style.padding = '10px';
 });
 
 infoButton.addEventListener('mouseout', (e) => {
-  while (infoButton.firstChild) {
-    infoButton.removeChild(infoButton.firstChild);
+  windowWrapper.style.padding = '0px';
+  while (windowWrapper.firstChild) {
+    windowWrapper.removeChild(windowWrapper.firstChild);
   }
 });
