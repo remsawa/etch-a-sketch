@@ -6,26 +6,26 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #616161;
+  
 }
 
 #container{
-  padding-top: 50px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
   background-color: rgb(38, 38, 38);
-  height: 950px;
-  width: 910px;
+  height: 734px;
+  width: 820px;
   border-radius: 15px; 
-  padding-bottom: 20px;
 
 }
 
 #sketchContainer {
   display: flex;
-  width: 784px;
-  height: 784px;
+  width: 548.8px;
+  height: 548.8px;
   background-color: #efefef;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -45,7 +45,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 450px;
+  width: 250px;
   height: 110px;
 }
 

@@ -75,8 +75,8 @@ function makeSq(sketchContainer) {
     const sq = document.createElement('div');
     sq.id = `sq${i}`; //Give each sq an id
     sq.classList.add('sq'); //Each sq has sq class
-    sq.style.width = `${squareSize}px`;
-    sq.style.height = `${squareSize}px`;
+    sq.style.width = `${squareSize*.7}px`;
+    sq.style.height = `${squareSize*.7}px`;
     sq.style.opacity = 0.2;
     sq.style.boxSizing = 'border-box';
     sketchContainer.appendChild(sq);
@@ -110,12 +110,15 @@ const infoContainer = document.querySelector('.infoContainer');
 const infoWindow = document.createElement('div');
 infoWindow.classList.add('window');
 
-infoButton.addEventListener('mouseover', (e) => {
+infoButton.addEventListener('mouseover',(e) => {
  
-  infoContainer.appendChild(infoWindow);
- 
+  body.appendChild(infoWindow);
+  infoWindow.style.width = '100px';
+  infoWindow.style.height = '100px';
+  infoWindow.style.backgroundColor = 'red';
+
   infoWindow.style.opacity = 0.5;
-  infoWindow.textContent ="hiii";
+  infoWindow.textContent = "hiii";
   console.log('hi');
 
 });
