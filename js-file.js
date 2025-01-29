@@ -18,24 +18,24 @@ slider.addEventListener('mouseup', () => {
     if (output.textContent == 100 ||  output.textContent < 125) {
       slider.value = 100;
       output.textContent = 100;
-    } else if (output.textContent > 125 && output.textContent < 160) {
+    } else if (output.textContent > 122 && output.textContent < 170) {
       slider.value = 144;
       output.textContent = 144;
-    } else if (output.textContent > 160 && output.textContent < 210) {
+    } else if (output.textContent > 170 && output.textContent < 222) {
       slider.value = 196;
       output.textContent = 196;
-    } else if (output.textContent > 210 && output.textContent < 300) {
+    } else if (output.textContent > 222 && output.textContent < 282) {
       slider.value = 256;
       output.textContent = 256; 
-    } else if (output.textContent > 300 && output.textContent < 345) {
+    } else if (output.textContent > 282 && output.textContent < 350) {
         slider.value = 324;
         output.textContent = 324;
-    } else if (output.textContent > 345 && output.textContent < 380) {
-      slider.value = 361;
-      output.textContent = 361;
-    } else if (output.textContent > 380) {
+    } else if (output.textContent > 350 && output.textContent < 426) {
       slider.value = 400;
       output.textContent = 400;
+    } else if (output.textContent > 426) {
+      slider.value = 484;
+      output.textContent = 484;
     }
     while(sketchContainer.firstChild) {
       sketchContainer.removeChild(sketchContainer.firstChild);
