@@ -1,7 +1,6 @@
 
 const container = document.querySelector('#container');
 const sketchContainer = document.querySelector('#sketchContainer');
-//const sq = document.createElement('div'); // Create a box
 const squares = sketchContainer.querySelectorAll('.sq');
 
 const slider = document.querySelector('.slider');
@@ -44,9 +43,7 @@ slider.addEventListener('mouseup', () => {
   
 });
 slider.addEventListener('mousedown', () => { 
-   //if (confirm("If you change the number of square your current work will be clear")){
     output.textContent = `${slider.value}`;
-   //}
 });
 
 const resetBtn = document.querySelector('#resetBtn');
@@ -95,6 +92,7 @@ sketchContainer.addEventListener('mouseover', (e) => {
 });
 
 //Erasing
+
 sketchContainer.addEventListener('mousedown', (e) => {
   if (e.target.classList.contains('sq')) {
     let currentOpacity = parseFloat(e.target.style.opacity);
