@@ -4,11 +4,6 @@ const sketchContainer = document.querySelector('#sketchContainer');
 //const sq = document.createElement('div'); // Create a box
 const squares = sketchContainer.querySelectorAll('.sq');
 
-
-//sketchContainer.appendChild(sq);
-
-//const defaultSqs = 256;
-
 const slider = document.querySelector('.slider');
 let sliderValue = slider.value;
 
@@ -20,25 +15,22 @@ slider.parentElement.appendChild(output);
 slider.addEventListener('mouseup', () => {
     output.textContent = `${slider.value}`;
     //Trying to create ticks
-    if (output.textContent <= 95) {
-      slider.value = 64;
-      output.textContent = 64;
-    } else if (output.textContent > 95 &&  output.textContent < 145) {
+    if (output.textContent == 100 ||  output.textContent < 125) {
       slider.value = 100;
       output.textContent = 100;
-    } else if (output.textContent > 145 && output.textContent < 225) {
+    } else if (output.textContent > 125 && output.textContent < 160) {
       slider.value = 144;
       output.textContent = 144;
-    } else if (output.textContent > 225 && output.textContent < 290) {
+    } else if (output.textContent > 160 && output.textContent < 210) {
       slider.value = 196;
       output.textContent = 196;
-    } else if (output.textContent > 290 && output.textContent < 355) {
+    } else if (output.textContent > 210 && output.textContent < 300) {
       slider.value = 256;
       output.textContent = 256; 
-    } else if (output.textContent > 355 && output.textContent < 350) {
+    } else if (output.textContent > 300 && output.textContent < 345) {
         slider.value = 324;
         output.textContent = 324;
-    } else if (output.textContent > 350 && output.textContent < 380) {
+    } else if (output.textContent > 345 && output.textContent < 380) {
       slider.value = 361;
       output.textContent = 361;
     } else if (output.textContent > 380) {
@@ -109,5 +101,27 @@ sketchContainer.addEventListener('mousedown', (e) => {
     if(currentOpacity > 0.2){
         e.target.style.opacity = currentOpacity - 0.2;
     }
+  }
+});
+
+const infoButton = document.querySelector('#infoButton');
+const infoContainer = document.querySelector('.infoContainer');
+
+const infoWindow = document.createElement('div');
+infoWindow.classList.add('window');
+
+infoButton.addEventListener('mouseover', (e) => {
+ 
+  infoContainer.appendChild(infoWindow);
+ 
+  infoWindow.style.opacity = 0.5;
+  infoWindow.textContent ="hiii";
+  console.log('hi');
+
+});
+
+infoButton.addEventListener('mouseout', (e) => {
+  while (infoButton.firstChild) {
+    infoButton.removeChild(infoButton.firstChild);
   }
 });
